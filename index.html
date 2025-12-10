@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <meta name="description" content="NUTRIJOSEPH - Tu tienda de nutrición y salud. Descubre productos saludables, recetas nutritivas y libros de nutrición para mejorar tu bienestar.">
+    <meta name="keywords" content="nutrición, salud, productos saludables, recetas, pérdida de peso, proteínas, ebooks nutrición">
+    <meta name="author" content="Roly Joseph Suni Merma">
+    <meta name="robots" content="index, follow">
+    
+    <meta property="og:title" content="NUTRIJOSEPH - Nutrición y Salud">
+    <meta property="og:description" content="Tu tienda de productos nutritivos y saludables">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://nutrijoseph.com">
+    
+    <title>NUTRIJOSEPH - Nutrición y Salud | Productos Saludables</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Outfit:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header class="header">
+        <nav class="navbar">
+            <div class="container">
+                <div class="nav-wrapper">
+                    <div class="logo">
+                        <i class="fas fa-leaf"></i>
+                        <span>NUTRIJOSEPH</span>
+                    </div>
+                    
+                    <ul class="nav-links">
+                        <li><a href="#inicio" class="nav-link active">Inicio</a></li>
+                        <li><a href="#sobre-mi" class="nav-link">Sobre Mí</a></li>
+                        <li><a href="#tienda" class="nav-link">Tienda</a></li>
+                        <li><a href="#contacto" class="nav-link">Contacto</a></li>
+                    </ul>
+                    
+                    <div class="nav-actions">
+                        <button class="cart-btn" id="cartBtn" aria-label="Carrito de compras">
+                            <i class="fas fa-shopping-cart"></i>
+                            <span class="cart-count" id="cartCount">0</span>
+                        </button>
+                        <button class="cta-btn">Consulta una cita</button>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <section class="hero" id="inicio">
+        <div class="container">
+            <div class="hero-content">
+                <h1 class="hero-title">Transforma tu Salud con Nutrición</h1>
+                <p class="hero-subtitle">Descubre productos y recetas que te ayudarán a alcanzar tus objetivos de bienestar</p>
+                <button class="hero-btn">Explorar Productos</button>
+            </div>
+        </div>
+    </section>
+
+    <section class="store-section" id="tienda">
+        <div class="container">
+            <div class="section-header">
+                <h2>tienda</h2>
+            </div>
+
+            <div class="filter-container">
+                <label for="categoryFilter">Ordenar:</label>
+                <select id="categoryFilter" class="filter-select">
+                    <option value="all">Featured</option>
+                    <option value="recipes">Recetas</option>
+                    <option value="books">Libros</option>
+                    <option value="meals">Comidas</option>
+                </select>
+            </div>
+
+            <div class="products-grid" id="productsGrid">
+                <article class="product-card" data-category="meals">
+                    <div class="product-image">
+                        <img src="imagenes/img1.jpg" alt="Desayuno Saludable">
+                        <div class="product-badge">NUEVO</div>
+                    </div>
+                    <div class="product-info">
+                        <h3 class="product-title">Desayuno Saludable</h3>
+                        <div class="product-price">
+                            <span class="price-current">S/18.00</span>
+                        </div>
+                        <button class="add-to-cart-btn" data-id="1" data-name="Desayuno Saludable" data-price="18.00" data-image="imagenes/img1.jpg">
+                            <i class="fas fa-cart-plus"></i>
+                            Añadir al carrito
+                        </button>
+                    </div>
+                </article>
+
+                <article class="product-card" data-category="recipes">
+                    <div class="product-image">
+                        <img src="imagenes/img2.jpg" alt="Pérdida de Peso">
+                        <div class="product-overlay">
+                            <span class="overlay-text">WEIGHT LOSS</span>
+                            <span class="overlay-subtitle">NUTRITION FOR WOMEN'S HEALTH</span>
+                        </div>
+                    </div>
+                    <div class="product-info">
+                        <h3 class="product-title">Pérdida de Peso</h3>
+                        <div class="product-price">
+                            <span class="price-old">S/44.00</span>
+                            <span class="price-current">S/29.00</span>
+                        </div>
+                        <button class="add-to-cart-btn" data-id="2" data-name="Pérdida de Peso" data-price="29.00" data-image="imagenes/img2.jpg">
+                            <i class="fas fa-cart-plus"></i>
+                            Añadir al carrito
+                        </button>
+                    </div>
+                </article>
+
+                <article class="product-card" data-category="recipes">
+                    <div class="product-image">
+                        <img src="imagenes/img3.jpg" alt="Verduras a la Plancha">
+                        <div class="product-overlay">
+                            <span class="overlay-text">GRILLED RECIPES</span>
+                            <span class="overlay-subtitle">UNLOCK THE SECRETS TO FLAWLESS</span>
+                        </div>
+                    </div>
+                    <div class="product-info">
+                        <h3 class="product-title">Verduras a la Plancha</h3>
+                        <div class="product-price">
+                            <span class="price-old">S/12.00</span>
+                            <span class="price-current">S/15.00</span>
+                        </div>
+                        <button class="add-to-cart-btn" data-id="3" data-name="Verduras a la Plancha" data-price="15.00" data-image="imagenes/img3.jpg">
+                            <i class="fas fa-cart-plus"></i>
+                            Añadir al carrito
+                        </button>
+                    </div>
+                </article>
+
+                <article class="product-card" data-category="meals">
+                    <div class="product-image">
+                        <img src="imagenes/img4.jpg" alt="Ensalada de Frutas">
+                    </div>
+                    <div class="product-info">
+                        <h3 class="product-title">Ensalada de Frutas</h3>
+                        <div class="product-price">
+                            <span class="price-old">S/30.00</span>
+                            <span class="price-current">S/24.00</span>
+                        </div>
+                        <button class="add-to-cart-btn" data-id="4" data-name="Ensalada de Frutas" data-price="24.00" data-image="imagenes/img4.jpg">
+                            <i class="fas fa-cart-plus"></i>
+                            Añadir al carrito
+                        </button>
+                    </div>
+                </article>
+
+                <article class="product-card" data-category="books">
+                    <div class="product-image">
+                        <img src="imagenes/img5.png" alt="El Libro de Nutrición">
+                    </div>
+                    <div class="product-info">
+                        <h3 class="product-title">El Libro de Nutrición</h3>
+                        <div class="product-price">
+                            <span class="price-old">S/25.00</span>
+                            <span class="price-current">S/18.00</span>
+                        </div>
+                        <button class="add-to-cart-btn" data-id="5" data-name="El Libro de Nutrición" data-price="18.00" data-image="imagenes/img5.png">
+                            <i class="fas fa-cart-plus"></i>
+                            Añadir al carrito
+                        </button>
+                    </div>
+                </article>
+
+                <article class="product-card" data-category="meals">
+                    <div class="product-image">
+                        <img src="imagenes/img6.jpg" alt="Los Mejores Batidos de Proteína">
+                    </div>
+                    <div class="product-info">
+                        <h3 class="product-title">Los Mejores Batidos de Proteína</h3>
+                        <div class="product-price">
+                            <span class="price-old">S/20.00</span>
+                            <span class="price-current">S/17.00</span>
+                        </div>
+                        <button class="add-to-cart-btn" data-id="6" data-name="Los Mejores Batidos de Proteína" data-price="17.00" data-image="imagenes/img6.jpg">
+                            <i class="fas fa-cart-plus"></i>
+                            Añadir al carrito
+                        </button>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <section class="newsletter-section">
+        <div class="container">
+            <div class="newsletter-content">
+                <div class="newsletter-image">
+                    <img src="imagenes/img4.jpg" alt="Consigue mi eBook gratis">
+                </div>
+                <div class="newsletter-form-wrapper">
+                    <h2>¡Consigue mi eBook gratis!</h2>
+                    <p>¿Quieres mejorar tus hábitos alimenticios y descubrir el poder de la nutrición y reducir el riesgo de enfermedades? Consigue mi eBook gratis aquí.</p>
+                    <form class="newsletter-form" id="newsletterForm">
+                        <input type="email" placeholder="Email" required aria-label="Email para newsletter">
+                        <button type="submit" class="submit-btn">Descargar</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-column">
+                    <div class="footer-logo">
+                        <i class="fas fa-leaf"></i>
+                        <span>NUTRIJOSEPH</span>
+                    </div>
+                    <div class="social-links">
+                        <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                        <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+
+                <div class="footer-column">
+                    <h4>Quick Links</h4>
+                    <ul class="footer-links">
+                        <li><a href="#sobre-mi">About Me</a></li>
+                        <li><a href="#tienda">My Shop</a></li>
+                        <li><a href="#blog">My Blog</a></li>
+                        <li><a href="#contacto">Contact</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-column">
+                    <h4>Our Services</h4>
+                    <ul class="footer-links">
+                        <li><a href="#">Support & Motivation</a></li>
+                        <li><a href="#">Weight Loss</a></li>
+                        <li><a href="#">Personalized Nutrition</a></li>
+                        <li><a href="#">Healthy Daily Life</a></li>
+                        <li><a href="#">Balanced Body & Mind</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-column">
+                    <h4>Newsletter</h4>
+                    <p>Suscríbete para recibir consejos de nutrición</p>
+                    <form class="footer-newsletter-form">
+                        <input type="email" placeholder="Ingresa tu email" required aria-label="Email">
+                        <button type="submit">Enviar</button>
+                    </form>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; 2025 NUTRIJOSEPH. Hecho por <strong>Roly Joseph Suni Merma</strong>. Todos los derechos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <div class="cart-modal" id="cartModal">
+        <div class="cart-modal-content">
+            <div class="cart-modal-header">
+                <h2>Carrito de Compras</h2>
+                <button class="close-modal" id="closeModal" aria-label="Cerrar carrito">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+            
+            <div class="cart-modal-body" id="cartModalBody">
+                <div class="empty-cart" id="emptyCart">
+                    <i class="fas fa-shopping-cart"></i>
+                    <p>Tu carrito está vacío</p>
+                </div>
+                
+                <div class="cart-items" id="cartItems"></div>
+            </div>
+            
+            <div class="cart-modal-footer" id="cartModalFooter">
+                <div class="cart-total">
+                    <span>Total:</span>
+                    <span class="total-amount" id="totalAmount">S/0.00</span>
+                </div>
+                <button class="checkout-btn">Proceder al Pago</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
